@@ -71,4 +71,8 @@
       "token":"433e721c-8d3f-498b-b7e0-de0719018f06"<br/>
     }<br/>
     
-    
+    ## Screenshots
+    ![alt text](https://github.com/gfso2000/hippo/blob/master/QRLogin.JPG)<br/>
+    ![alt text](https://github.com/gfso2000/hippo/blob/master/EmailLogin.JPG)<br/>
+    ![alt text](https://github.com/gfso2000/hippo/blob/master/ResetPassword.JPG)<br/>
+    ![alt text](https://github.com/gfso2000/hippo/blob/master/Register.JPG)<br/>
