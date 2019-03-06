@@ -1,0 +1,6 @@
+https://github.com/umijs/umi/tree/master/packages/umi-plugin-locale
+npm install umi-plugin-locale --save
+
+当本地开发完毕之后，如果服务器的接口满足之前的约定，那么只需要关闭 mock 数据或者代理到服务端的真实接口地址即可。
+npm run start:no-mock
+

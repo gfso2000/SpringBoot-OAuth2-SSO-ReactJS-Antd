@@ -1,0 +1,73 @@
+create database test;
+use test;
+
+drop table IF EXISTS user_resetpwd;
+drop table IF EXISTS user_activation;
+drop table IF EXISTS user_roles;
+drop table IF EXISTS users;
+drop table IF EXISTS user_mobilelogin;
+
+CREATE TABLE users (
+  username VARCHAR(45) NOT NULL ,
+  password VARCHAR(100) NOT NULL ,
+  enabled TINYINT NOT NULL DEFAULT 1 ,
+  firstname VARCHAR(45) NOT NULL ,
+  lastname VARCHAR(45) NOT NULL ,
+  createddate timestamp NULL ,
+  activateddate timestamp NULL ,
+  PRIMARY KEY (username)
+);
+
+CREATE TABLE user_roles (
+  user_role_id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(45) NOT NULL,
+  role varchar(45) NOT NULL,
+  PRIMARY KEY (user_role_id),
+  UNIQUE KEY uni_username_role (role,username),
+  KEY fk_username_idx (username),
+  CONSTRAINT fk_username FOREIGN KEY (username) REFERENCES users (username)
+);
+
+INSERT INTO users(username,firstname, lastname, password,enabled)
+VALUES ('165221217@qq.com','Jack','Yu','$2a$10$klq.u0DA.sCufOtRqEaioeGBIv0S2vZnJi8x6hN4AQBdwD8YWVTSe', true);
+
+INSERT INTO user_roles (username, role)
+VALUES ('165221217@qq.com', 'ROLE_USER');
+INSERT INTO user_roles (username, role)
+VALUES ('165221217@qq.com', 'ADMIN');
+INSERT INTO user_roles (username, role)
+VALUES ('165221217@qq.com', 'ROLE_ADMIN');
+
+CREATE TABLE user_activation (
+  username varchar(45) NOT NULL,
+  activationcode varchar(100) NOT NULL,
+  createddate timestamp NOT NULL ,
+  PRIMARY KEY (username),
+  UNIQUE KEY uni_username_activationcode (username,activationcode),
+  CONSTRAINT fk_username1 FOREIGN KEY (username) REFERENCES users (username)
+);
+
+CREATE TABLE user_resetpwd (
+  username varchar(45) NOT NULL,
+  resetpwdcode varchar(100) NOT NULL,
+  createddate timestamp NOT NULL ,
+  PRIMARY KEY (username),
+  UNIQUE KEY uni_username_resetpwdcode (username,resetpwdcode),
+  CONSTRAINT fk_username2 FOREIGN KEY (username) REFERENCES users (username)
+);
+
+CREATE TABLE user_mobilelogin (
+  username varchar(45) NOT NULL,
+  token varchar(100) NOT NULL,
+  createddate timestamp NOT NULL ,
+  PRIMARY KEY (username)
+);
+
+delete from user_mobilelogin where username='jack.yu05@sap.com';
+delete from user_resetpwd where username='jack.yu05@sap.com';
+delete from user_activation where username='jack.yu05@sap.com';
+delete from user_roles where username='jack.yu05@sap.com';
+delete from users where username='jack.yu05@sap.com';
+
+
+

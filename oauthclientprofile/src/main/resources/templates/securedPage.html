@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Spring Security SSO</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+</head>
+
+<body>
+<div class="container">
+	<div class="col-sm-12">
+		<h1>Secured Page</h1>
+		<a class="btn btn-primary" href="javascript: document.logoutForm.submit()">Logout</a>
+
+   		<form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+      		<input th:hidden="true" type="submit" value="Sign Out"/>
+   		</form>
+	</div>
+</div>
+</body>
+</html>

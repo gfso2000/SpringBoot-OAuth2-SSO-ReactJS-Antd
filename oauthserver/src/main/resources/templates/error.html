@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Error</title>
+        <base href="/"></base>
+		<meta charset="UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+		<link rel="stylesheet" href="css/bootstrap.min.css"></link>
+    </head>
+    <body>
+        <div class="container">
+		    <h1 class="alert alert-warning" th:text="${errorMessage}">success</h1>
+    		<a th:href="@{/login}" th:text="#{login}">login</a>
+		</div>
+    </body>
+</html>

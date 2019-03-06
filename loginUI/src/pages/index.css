@@ -1,0 +1,37 @@
+.loginContainer {
+  border-radius:10px;
+  padding:62px 110px 33px 110px;
+  background:#fff;
+  width:680px;
+}
+
+.other {
+  margin-top: 12px;
+  line-height: 22px;
+  text-align: left
+}
+
+.signup {
+  margin-top: 0px;
+  line-height: 22px;
+}
+
+.icon {
+    margin-left: 16px;
+    color: rgba(0,0,0,.2);
+    font-size: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color .3s
+}
+.icon:hover {
+    color: #1890ff
+}
+
+.languageWidth {
+  width:120px;
+}
+
+.tabClass{
+  /* height:280px; */
+}
