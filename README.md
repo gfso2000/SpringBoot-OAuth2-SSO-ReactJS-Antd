@@ -11,14 +11,14 @@
     
 ## How to use them:
 1. oauthserver<br/>
-    in https://github.com/gfso2000/together/blob/master/oauthserver/src/main/resources/application.properties, <br/>
+    in https://github.com/gfso2000/SpringBoot-OAuth2-SSO-ReactJS-Antd/blob/master/oauthserver/src/main/resources/application.properties, <br/>
     change "spring.mail.username" and "spring.mail.password" to your gmail username/password<br/>
     
     execute sql in MySQL to create db schema:<br/>
-    https://github.com/gfso2000/together/blob/master/oauthserver/src/main/resources/mysql_script/sql.txt<br/>
+    https://github.com/gfso2000/SpringBoot-OAuth2-SSO-ReactJS-Antd/blob/master/oauthserver/src/main/resources/mysql_script/sql.txt<br/>
     
 2. oauthclientprofile<br/>
-    in https://github.com/gfso2000/together/blob/master/oauthclientprofile/src/main/resources/application.properties,<br/>
+    in https://github.com/gfso2000/SpringBoot-OAuth2-SSO-ReactJS-Antd/blob/master/oauthclientprofile/src/main/resources/application.properties,<br/>
     change "spring.mail.username" and "spring.mail.password" to your gmail username/password<br/>
     
 3. loginUI<br/>
