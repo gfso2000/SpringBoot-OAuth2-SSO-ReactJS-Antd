@@ -6,4 +6,4 @@ echo JAVA_HOME: %JAVA_HOME%
 echo JRE_HOME: %JRE_HOME%
 echo PATH: %PATH%
 REM -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 
-java -Dserver.port=8445 -jar target/OAuthDemo-0.0.1-SNAPSHOT.jar
+java -Dserver.port=8445 -jar target/oauthclientprofile-0.0.1-SNAPSHOT.jar

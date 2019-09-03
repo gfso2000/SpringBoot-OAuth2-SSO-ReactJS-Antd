@@ -30,6 +30,7 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
                 .secret("$2a$10$klq.u0DA.sCufOtRqEaioeGBIv0S2vZnJi8x6hN4AQBdwD8YWVTSe")//{noop}web_app
                 .scopes("FOO")
                 .autoApprove(true)
+                .redirectUris("http://localhost:8445/login")
                 .authorities("FOO_READ", "FOO_WRITE")
                 .authorizedGrantTypes("implicit","refresh_token", "password", "authorization_code").autoApprove(true);
                 //.accessTokenValiditySeconds(5);

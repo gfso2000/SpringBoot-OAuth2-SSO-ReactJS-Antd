@@ -11,6 +11,7 @@ public class Utils {
 			final DatagramSocket socket = new DatagramSocket();
 			socket.connect(InetAddress.getByName("8.8.8.8"), 10002);
 			String ip = socket.getLocalAddress().getHostAddress();
+			socket.close();
 			return request.getScheme()+"://"+ip+":"+request.getServerPort();
 		} catch (Exception e) {
 			e.printStackTrace();
